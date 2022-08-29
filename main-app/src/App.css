@@ -1,11 +1,14 @@
-html {
-  width: 100vw;
-  margin: 0px;
-  padding: 0px;
-}
+/* 
+  320  smallest we need to test
+  <576px mobile 
+  ≥768px medium
+*/
 
 body {
+  font-family: 'Open Sans', sans-serif;
   width: 100%;
+  margin: 0px;
+  padding: 0px;
 }
 
 header {
@@ -13,7 +16,7 @@ header {
   height: 4em;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: nowrap;
   background-color: rgb(205, 240, 222);
 }
@@ -21,4 +24,39 @@ header {
 header h1 {
   padding: 0px;
   margin: 0px;
+}
+
+main {
+  padding: 20px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+#GameBoard {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(6, 100px);
+  border-right: black 1px solid;
+  border-bottom: black 1px solid;
+}
+
+.BoardSquare {
+  border-top: black 1px solid;
+  border-left: black 1px solid;
+}
+
+.BoardSquare h2 {
+  font-weight: 500;
+}
+
+.PlayerPiece {
+  border-radius: 50%;
+  border: 2px solid;
+  width: 20px;
+  height: 20px;
+}
+
+#Red {
+  background-color: red;
 }
